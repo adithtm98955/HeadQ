@@ -1,0 +1,27 @@
+name: Show Push Details
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Show commit info
+        run: |
+          echo "🚀 New push detected!"
+          echo "Repository: $GITHUB_REPOSITORY"
+          echo "Branch: $GITHUB_REF"
+          echo "Commit message:"
+          git log -1 --pretty=%B
+
+      - name: List files
+        run: |
+          echo "📂 Files in repo:"
+          ls -R
