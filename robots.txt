@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sumith12345678.github.io/hq/sitemap.xml
+Sitemap: https://headq.in/sitemap.xml
